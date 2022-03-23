@@ -6,6 +6,7 @@ package Tela;
 
 import Fonte.Luta;
 import Fonte.Lutador;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -107,7 +108,12 @@ public class EventoLuta extends javax.swing.JFrame {
 
         btnOito.setText("Teste");
 
-        jButton1.setText("Lutar");
+        jButton1.setText("Status Do Jogador");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         btnVoltar.setText("Voltar");
         btnVoltar.addActionListener(new java.awt.event.ActionListener() {
@@ -140,11 +146,12 @@ public class EventoLuta extends javax.swing.JFrame {
                             .addComponent(btnSeis, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addGap(86, 86, 86))
             .addGroup(layout.createSequentialGroup()
-                .addGap(136, 136, 136)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(12, 12, 12)
+                        .addGap(136, 136, 136)
+                        .addComponent(btnVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(110, 110, 110)
                         .addComponent(jButton1)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -225,6 +232,12 @@ public class EventoLuta extends javax.swing.JFrame {
         luta.marcarLuta(this.aux2[0],this.aux2[4]);
         luta.lutar();
     }//GEN-LAST:event_btnSeteActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // mostrar o status (vitórias, derrotas e empates do personagem)
+        aux2[0].Status();
+        //JOptionPane.showMessageDialog(null,aux2[0].Status());
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     
     public static void main(String args[]) {

@@ -1,5 +1,7 @@
 package Fonte;
 
+import javax.swing.JOptionPane;
+
 
 public class Lutador {
     private String nome,nacionalidade,categoria; //nome e nacionalidade vem da tela
@@ -32,7 +34,7 @@ public class Lutador {
         return nacionalidade;
     }
     
-        public void setPeso(float pe){
+    public void setPeso(float pe){
         this.peso=pe;
         setCategoria();
     }
@@ -113,6 +115,7 @@ public class Lutador {
     }
     
     public void Status(){
+        
         System.out.printf("\n%s é um peso %s",this.getNome(),this.getCategoria());
         System.out.printf("\nTeve %d Vitórias",this.getVitorias());
         System.out.printf("\nTeve %d Derrotas",this.getDerrotas());

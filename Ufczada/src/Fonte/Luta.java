@@ -56,6 +56,8 @@ public class Luta {
             this.desafiado.Apresentar();
             this.desafiante.Apresentar();
             
+            
+            
             Random aleatorio= new Random();
             int randomico = aleatorio.nextInt(3);
             
@@ -82,8 +84,10 @@ public class Luta {
             
         }else{
             System.out.println("luta não pode acontecer!!!");
-        }
-        
-        
+        }        
+    }
+    
+    public void Teste(){
+        this.desafiante.Status();
     }
 }
