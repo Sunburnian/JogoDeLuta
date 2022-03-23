@@ -40,7 +40,6 @@ public class Personagem extends javax.swing.JFrame {
         txtIdade = new javax.swing.JTextField();
         txtPeso = new javax.swing.JTextField();
         btnCriar = new javax.swing.JButton();
-        btnLutar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -73,13 +72,6 @@ public class Personagem extends javax.swing.JFrame {
             }
         });
 
-        btnLutar.setText("Lutar");
-        btnLutar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLutarActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -102,9 +94,7 @@ public class Personagem extends javax.swing.JFrame {
                 .addGap(66, 66, 66))
             .addGroup(layout.createSequentialGroup()
                 .addGap(140, 140, 140)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnCriar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnLutar, javax.swing.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE))
+                .addComponent(btnCriar, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -132,8 +122,7 @@ public class Personagem extends javax.swing.JFrame {
                     .addComponent(txtPeso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
                 .addComponent(btnCriar)
-                .addGap(45, 45, 45)
-                .addComponent(btnLutar))
+                .addGap(70, 70, 70))
         );
 
         pack();
@@ -148,6 +137,7 @@ public class Personagem extends javax.swing.JFrame {
     }//GEN-LAST:event_txtNacionalidadeActionPerformed
 
     private void btnCriarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCriarActionPerformed
+        //aqui eu crio o meu lutador e todos os outros participantes verificando se o campo de inscrição ta ou não vazio
         if(txtNome.getText().isEmpty()||txtNacionalidade.getText().isEmpty()||txtAltura.getText().isEmpty()||
             txtIdade.getText().isEmpty()||txtPeso.getText().isEmpty()){
             
@@ -167,14 +157,16 @@ public class Personagem extends javax.swing.JFrame {
             lutador[4] = new Lutador("Matheus", "Brasil", 63.2f, 1.80f, 22);
             lutador[5] = new Lutador("Jhon", "França", 119.0f, 1.95f, 27);
             lutador[6] = new Lutador("Bang", "França", 98.0f, 1.95f, 31);
-            lutador[7] = new Lutador("FRT", "EUA", 80.0f, 1.95f, 35);
+            lutador[7] = new Lutador("FRT", "EUA", 80.0f, 1.95f, 35);   
+            
+            EventoLuta evento = new EventoLuta(lutador);
+            
+            this.setVisible(false);
+            evento.setVisible(true);
+                        
         }
         
     }//GEN-LAST:event_btnCriarActionPerformed
-
-    private void btnLutarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLutarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnLutarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -213,7 +205,6 @@ public class Personagem extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCriar;
-    private javax.swing.JButton btnLutar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

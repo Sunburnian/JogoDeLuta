@@ -44,10 +44,7 @@
           </Group>
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="140" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="btnCriar" max="32767" attributes="0"/>
-                  <Component id="btnLutar" pref="148" max="32767" attributes="0"/>
-              </Group>
+              <Component id="btnCriar" min="-2" pref="148" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -82,8 +79,7 @@
               </Group>
               <EmptySpace pref="67" max="32767" attributes="0"/>
               <Component id="btnCriar" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
-              <Component id="btnLutar" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -136,14 +132,6 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCriarActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="btnLutar">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Lutar"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLutarActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>
